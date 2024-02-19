@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculo Presupuesto</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <div class="centering">
+            <div class="box">
+                <div>
+                    <h2>Calculo de presupuesto</h2>
+                    <div class="input__wrapper">
+                        <input id="ingreso_total" type="number" class="input__field" placeholder="Ingreso total">
+                        <label for="ingreso_total" class="input__label">
+                            Ingreso
+                        </label>
+                    </div>
+                    <div class="btn-space">
+                        <button onclick="mostrarModal()" class="btn">Calcular</button>
+                        <button onclick="reset()" class="btn">Reset</button>
+                    </div>
+                <div id="miModal" class="modal">
+                    <div class="modal-contenido">
+                      <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+                      <p id="resultado"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./js/script.js" ></script>
+    </body>
+</html>
+

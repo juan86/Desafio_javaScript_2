@@ -1,0 +1,162 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+:root {
+  --primary: #007FFF;
+  --secondary: #6F7E8C;
+  --hover: #F5F5F5;
+  --text: #212121;
+}
+
+.box {
+  background-color: white;
+  padding: 24px;
+  padding-top: 12px;
+  border-radius: 16px;
+  border: 1px solid  rgb(190, 188, 188);
+  box-shadow: 0 10px 20px rgba(3, 3, 3, 0.3);
+}
+
+.box h2 {
+  margin-top: 10px;
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #667380;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: var(--primary);
+}
+
+.input__wrapper {
+  position: relative;
+  padding: 15px 0 0;
+}
+
+.input__field {
+  border: 0;
+  border-bottom: 2px solid var(--secondary);
+  outline: 0;
+  font-size: 18px;
+  color: var(--text);
+  padding: 10px 0px;
+  padding-right: 32px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.input__field::placeholder {
+  color: transparent;
+}
+
+.input__field:placeholder-shown ~ .input__label {
+  font-size: 16px;
+  cursor: text;
+  color: var(--secondary);
+  top: 20px;
+}
+
+label,
+.input__field:focus ~ .input__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 14px;
+  left: -1px;
+  color: var(--secondary);
+  transition: 0.3s;
+}
+
+.input__field:focus ~ .input__label {
+  color: var(--primary);
+}
+
+.input__field:focus {
+  border-bottom: 2px solid var(--primary);
+}
+
+.input__icon:hover {
+  border-radius: 50%;
+  background-color: var(--hover);
+}
+
+.btn{
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight:  bold;
+    color: white;
+    background-color: #6F7E8C;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.5s, box-shadow 0.2s;
+}
+
+.btn:hover{
+    color: #667380;
+    background: #a4ccf5;
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: none;
+}
+
+.btn-space{
+    padding-top: 20px;
+}
+
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5);
+    font-size: 1.5rem; 
+}
+  
+.modal-contenido {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.cerrar-modal {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: -2px; /* Subir el botón X en 2px */
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
